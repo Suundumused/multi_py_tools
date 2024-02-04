@@ -5,7 +5,7 @@ def get_current_directory(args: tuple=()):
         path = os.path.dirname(os.path.abspath(sys.argv[0]))#else if Running as .py script.
     
     if args:
-        return os.path.join(path, ''.join(args))
+        return os.path.join(path, *args)
     else:
         return path
     
